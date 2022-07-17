@@ -1,0 +1,90 @@
+:root {
+    --black: #191919;
+    --brown: #B88746;
+    --yellow: #FDF5A6;
+    --mainFont: 'Cormorant SC', serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+}
+
+.header {
+    width: 100%;
+    height: 15vh;
+    color: white;
+    font-family: var(--mainFont, sans-serif);
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.logo img {
+    justify-self: start;
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.title {
+    justify-self: center;
+}
+
+.links {
+    justify-self: end;
+    margin-right: 30px;
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.menu:hover, .contacts:hover{
+    text-decoration: underline;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    gap: 30px;
+
+}
+
+.phrase {
+    margin-top: -220px;
+    font-family: var(--mainFont, sans-serif);
+    font-size: 130px;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+.menuButton {
+
+    font-family: var(--mainFont, sans-serif);
+    font-size: 25px;
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    box-shadow: 0px 0px 10px black;
+}
