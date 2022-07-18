@@ -1,35 +1,42 @@
+import './style.css';
 import Logo from "./logo.png";
 export function loadMain() {
     const contentContainer = document.getElementById("content");
+    const header = document.querySelector(".header");
 
     //Header creation
-    const header = document.createElement("div");
-    header.className = "header";
+    if (header === null) {
 
-    const logoDiv = document.createElement("div");
-    logoDiv.className="logo";
-    const myLogo = new Image();
-    myLogo.src = Logo;
-    logoDiv.appendChild(myLogo);
+        const header = document.createElement("div");
+        header.className = "header";
 
-    const title = document.createElement("p");
-    title.className = "title";
-    title.innerText = "McDonald's";
+        const logoDiv = document.createElement("div");
+        logoDiv.className = "logo";
+        const myLogo = new Image();
+        myLogo.src = Logo;
+        myLogo.className = "mcLogo";
+        logoDiv.appendChild(myLogo);
 
-    const linkDiv = document.createElement("div");
-    linkDiv.className = "links";
-    const menuLink = document.createElement("a");
-    menuLink.innerText = "Menu";
-    menuLink.className = "menu";
-    const contactsLink = document.createElement("a");
-    contactsLink.innerText = "Contacts";
-    contactsLink.className = "contacts";
-    linkDiv.appendChild(menuLink);
-    linkDiv.appendChild(contactsLink);
+        const title = document.createElement("p");
+        title.className = "title";
+        title.innerText = "McDonald's";
 
-    header.appendChild(logoDiv);
-    header.appendChild(title);
-    header.appendChild(linkDiv);
+        const linkDiv = document.createElement("div");
+        linkDiv.className = "links";
+        const menuLink = document.createElement("a");
+        menuLink.innerText = "Menu";
+        menuLink.className = "menu";
+        const contactsLink = document.createElement("a");
+        contactsLink.innerText = "Contacts";
+        contactsLink.className = "contacts";
+        linkDiv.appendChild(menuLink);
+        linkDiv.appendChild(contactsLink);
+
+        header.appendChild(logoDiv);
+        header.appendChild(title);
+        header.appendChild(linkDiv);
+        contentContainer.appendChild(header);
+    }
 
     //mainContent creation
     const mainContent = document.createElement("div");
@@ -46,8 +53,7 @@ export function loadMain() {
     mainContent.appendChild(phrase);
     mainContent.appendChild(menuButton);
 
-    //Header and mainContent appending to container
-    contentContainer.appendChild(header);
+    //Appending to content container(main)
     contentContainer.appendChild(mainContent);
 
 }

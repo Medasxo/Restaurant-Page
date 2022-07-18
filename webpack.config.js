@@ -4,7 +4,8 @@ const path = require('path');
 module.exports = {
   entry: {
     index: './src/index.js',
-    print: './src/loadMain.js',
+    loadMain: './src/loadMain.js',
+    loadMenu: './src/loadMenu.js',
   },
   output: {
     filename: '[name].bundle.js',
