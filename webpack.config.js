@@ -6,6 +6,7 @@ module.exports = {
     index: './src/index.js',
     loadMain: './src/loadMain.js',
     loadMenu: './src/loadMenu.js',
+    loadContacts: './src/loadContacts.js',
   },
   output: {
     filename: '[name].bundle.js',

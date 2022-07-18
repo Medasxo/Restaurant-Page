@@ -1,6 +1,7 @@
 
 import {loadMain} from "../src/loadMain";
 import {loadMenu} from "../src/loadMenu";
+import {loadContacts} from "../src/loadContacts";
 
 
 loadMain();
@@ -19,6 +20,12 @@ logoLink.addEventListener('click', () => {
     loadMain();
     addMenuButtonLink();
 });
+
+const contactsLink = document.querySelector(".contacts");
+contactsLink.addEventListener('click', () => {
+    deleteBelowHeader();
+    loadContacts();
+})
 
 function deleteBelowHeader(){
     const contentContainer = document.getElementById("content");

@@ -1,3 +1,44 @@
-body{
-    background-color: black;
+:root {
+    --mainFont: 'Cormorant SC', serif;
+}
+
+.flexContainer{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    display: flex;
+    gap: 100px;
+}
+.food{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 330px;
+    width: 330px;
+}
+.food p{
+    
+    position: absolute;
+    bottom: 10px;
+    font-family: var(--mainFont, sans-serif);
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+.food img{
+    max-width:100%;
+    max-height: 100%;
+    object-fit: contain;
 }
